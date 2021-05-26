@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+}
+
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body{
+  background: rgba( 71, 147, 227, 1);
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #17091B;
+  padding: 30px 0;
+}
+
+/* Table Styles */
+
+.Wrapper{
+  margin: 10px 70px 70px;
+  box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.Table {
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.Table td, .Table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.Table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.Table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+.Table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.Table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .Table {
+    display: block;
+    width: 100%;
+  }
+  .Wrapper:before{
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .Table thead, .Table tbody, .Table thead th {
+    display: block;
+  }
+  .Table thead th:last-child{
+    border-bottom: none;
+  }
+  .Table thead {
+    float: left;
+  }
+  .Table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .Table td, .Table th {
+    padding: 20px .625em .625em .625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .Table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  .Table tbody tr {
+    display: table-cell;
+  }
+  .Table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .Table tr:nth-child(even) {
+    background: transparent;
+  }
+  .Table tr td:nth-child(odd) {
+    background: #F8F8F8;
+    border-right: 1px solid #E6E4E4;
+  }
+  .Table tr td:nth-child(even) {
+    border-right: 1px solid #E6E4E4;
+  }
+  .Table tbody td {
+    display: block;
+    text-align: center;
+  }
+}
